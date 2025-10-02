@@ -1,3 +1,60 @@
+
+TastyTable Backend
+
+TastyTable is a backend project developed by four students:
+
+Mustafa Elmi Muse
+
+Liibaan Olow
+
+Ahmed Ismail Musse
+
+Mahamed Hassan Ali
+
+About the Project
+
+TastyTable is a monolithic backend solution for managing restaurant menus, user authentication, customer orders, and table reservations. Developed as part of a backend programming course, the project focuses on modern and relevant technologies to create a secure, maintainable, and extendable system.
+
+The backend follows a clean architecture with separation of concerns across layers:
+
+API Layer: Exposes endpoints, handles authentication, and integrates Swagger
+
+Core Layer: Defines entities, DTOs, and interfaces
+
+Services Layer: Implements business logic for users, menus, and orders
+
+Data Layer: Integrates MySQL with EF Core, manages migrations and seeding
+
+Tests Layer: Unit tests with xUnit and Moq
+
+Key Features
+
+User registration and login with JWT tokens
+
+Admin management of menu items and availability
+
+Users can browse menus, place orders, and make table reservations
+
+Demo data seeding and database setup included
+
+Fully tested business logic
+
+Technologies and Tools
+
+Backend Framework: ASP.NET Core (.NET, C#)
+
+Database: MySQL
+
+Authentication: JWT (JSON Web Tokens)
+
+Version Control: Git and GitHub
+
+API Documentation: Swagger / OpenAPI
+
+TastyTable demonstrates secure backend development, role-based access control, unit testing, and deployment readiness, making it suitable for integration with web or mobile applications.
+
+
+
 # TastyTable (.NET 8 + MySQL + JWT + Docker + AWS)
 
 Monolithic Web API built with **ASP.NET Core 8**, **Entity Framework Core (MySQL)**, and **JWT authentication**.  
