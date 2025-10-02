@@ -53,7 +53,34 @@ API Documentation: Swagger / OpenAPI
 
 TastyTable demonstrates secure backend development, role-based access control, unit testing, and deployment readiness, making it suitable for integration with web or mobile applications.
 
+Installation
 
+Clone the repository:
+
+git clone https://github.com/mustafa3m/TastyTable-final-1.git
+cd TastyTable
+
+
+Install dependencies:
+Open the solution in Visual Studio or use CLI:
+
+dotnet restore
+
+
+Set up the database:
+
+Create a MySQL database
+
+Update the connection string in appsettings.json
+
+Run migrations (if used):
+
+dotnet ef database update
+
+
+Start the server:
+
+dotnet run
 
 # TastyTable (.NET 8 + MySQL + JWT + Docker + AWS)
 
