@@ -1,0 +1,36 @@
+# version: "3.9"
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: tastytable-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: Mohamed2009
+      MYSQL_DATABASE: TastyTableDb
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  api:
+    build:
+      context: .
+      dockerfile: .
+    container_name: tastytable-api
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      # override connection string to point at the MySQL service name "db"
+      ConnectionStrings__DefaultConnection: "server=db;port=3306;database=TastyTableDb;user=root;password=Mohamed2009;"
+      ASPNETCORE_ENVIRONMENT: "Development"
+    ports:
+      - "8080:8080"
+
+volumes:
+  mysql_data: {}
